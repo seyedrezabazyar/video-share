@@ -21,5 +21,5 @@ Route::get('/panel', function(){
     echo "hello from web.php";
 });
 
-Route::get('video', [\App\Http\Controllers\VideoController::class, 'index']);
+Route::get('videos', [\App\Http\Controllers\VideoController::class, 'index']);
 Route::get('best', '\App\Http\Controllers\VideoController@best');
