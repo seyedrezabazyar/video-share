@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/panel', function(){
+    echo "hello from web.php";
+});
+
+Route::get('video', [\App\Http\Controllers\VideoController::class, 'index']);
+Route::get('best', '\App\Http\Controllers\VideoController@best');
