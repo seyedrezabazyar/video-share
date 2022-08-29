@@ -18,7 +18,7 @@ Route::get('/factory', function (){
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('videos', [\App\Http\Controllers\VideoController::class, 'index']);
