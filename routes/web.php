@@ -13,13 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/factory', function (){
+    \App\Models\Video::factory()->create();
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/panel', function(){
-    echo "hello from web.php";
-});
-
 Route::get('videos', [\App\Http\Controllers\VideoController::class, 'index']);
-Route::get('best', '\App\Http\Controllers\VideoController@best');
