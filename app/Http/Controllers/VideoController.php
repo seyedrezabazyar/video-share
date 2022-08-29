@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Video;
+
 class VideoController extends Controller{
     public function index()
     {
-        $videos = ['A','B','C','D'];
-        return view('videos', [
-            'videos' => $videos,
-            'is_admin' => true
-        ]);
+//        $videos = Video::find(1);
+//        dd($videos);
+        $videos = Video::all();
+        return $videos;
+
     }
 
     public function best()
