@@ -18,10 +18,11 @@ class VideoFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'url' => $this->faker->imageUrl(446, 240, 'animals', true),
+            'url' => 'https://comtel-online.com/wp-content/uploads/2020/08/file_example_MP4_1920_18MG.mp4',
             'length' => $this->faker->randomNumber(3),
             'slug' => $this->faker->slug(),
-            'description' => $this->faker->realText()
+            'description' => $this->faker->realText(),
+            'thumbnail' => 'https://loremflickr.com/446/240/world?random=' . rand(1,99)
         ];
     }
 }
