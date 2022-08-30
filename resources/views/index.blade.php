@@ -107,7 +107,7 @@
                 <div class="video-item">
                     <div class="thumb">
                         <div class="hover-efect"></div>
-                        <small class="time">{{$video->length}}</small>
+                        <small class="time">{{gmdate('i:s',$video->length)}}</small>
                         <a href="#"><img src="{{$video->thumbnail}}" alt=""></a>
                     </div>
                     <div class="video-info">
@@ -127,7 +127,7 @@
                 <div class="video-item">
                     <div class="thumb">
                         <div class="hover-efect"></div>
-                        <small class="time">{{$video->length}}</small>
+                        <small class="time">{{gmdate('i:s',$video->length)}}</small>
                         <a href="#"><img src="{{$video->thumbnail}}" alt=""></a>
                     </div>
                     <div class="video-info">
@@ -147,7 +147,7 @@
                 <div class="video-item">
                     <div class="thumb">
                         <div class="hover-efect"></div>
-                        <small class="time">{{$video->length}}</small>
+                        <small class="time">{{gmdate('i:s',$video->length)}}</small>
                         <a href="#"><img src="{{$video->thumbnail}}" alt=""></a>
                     </div>
                     <div class="video-info">
