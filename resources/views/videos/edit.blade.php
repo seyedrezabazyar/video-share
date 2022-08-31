@@ -7,7 +7,7 @@
             <!-- upload -->
             <div class="col-md-8">
                 <h1 class="page-title"><span>@lang('videos.upload')</span> @lang('videos.film')</h1>
-                <form action="" method="POST">
+                <form action="{{route('videos.update', $video->slug)}}" method="POST">
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
