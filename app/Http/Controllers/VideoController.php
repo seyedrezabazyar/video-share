@@ -29,6 +29,6 @@ class VideoController extends Controller
             'thumbnail' => ['required', 'url'],
         ]);
         Video::create($request->all());
-        return redirect()->route('index')->with('alert', 'عملیات شما موفقیت آمیز بود.');
+        return redirect()->route('index')->with('alert', __('messages.success'));
     }
 }
