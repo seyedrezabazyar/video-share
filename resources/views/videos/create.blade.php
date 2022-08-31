@@ -6,7 +6,7 @@
         <!-- upload -->
         <div class="col-md-8">
             <h1 class="page-title"><span>آپلود</span> فیلم</h1>
-            <form action="/videos" method="POST">
+            <form action="{{route('videos.store')}}" method="POST">
                 @csrf
                 <div class="row">
                     <div class="col-md-6">

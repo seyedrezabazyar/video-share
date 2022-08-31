@@ -14,15 +14,6 @@ class Video extends Model
         'name', 'description', 'length', 'url', 'slug', 'thumbnail'
     ];
 
-    # فقط این موارد می توانند وارد شوند
-//    protected $fillable = [
-//        'name' , 'url', 'thumbnail', 'slug' , 'length'
-//    ];
-    # بجز توضیحات، همه چیز می تواند وارد شود
-//    protected $guarded = [
-//        'description'
-//    ];
-
     public function getLengthAttribute($value)
     {
         return gmdate('i:s', $value);
