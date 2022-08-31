@@ -44,7 +44,7 @@
                     <i class="fa fa-close"></i>
                 </a>
                 <div id="logo">
-                    <a href="01-home.html"><img src="{{asset('img/logo.png')}}" alt=""></a>
+                    <a href="{{route('index')}}"><img src="{{asset('img/logo.png')}}" alt=""></a>
                 </div>
             </div><!-- // col-md-2 -->
             <div class="col-lg-3 col-md-3 col-sm-6 hidden-xs hidden-sm">
@@ -64,7 +64,8 @@
                 <div class="dropdown">
                     <a data-toggle="dropdown" href="#" class="user-area">
                         <div class="thumb"><img
-                                src="https://secure.gravatar.com/avatar/ca633625bd01098551dc4cd1e054b9f1?s=80&d=mm&r=g" alt="">
+                                src="https://secure.gravatar.com/avatar/ca633625bd01098551dc4cd1e054b9f1?s=80&d=mm&r=g"
+                                alt="">
                         </div>
                         <h2>سیدرضا بازیار</h2>
                         <h3>25 اشتراک</h3>

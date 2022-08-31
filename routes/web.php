@@ -18,3 +18,4 @@ Route::get('/', [\App\Http\Controllers\IndexController::class, 'index'])->name('
 Route::get('/videos/create', [\App\Http\Controllers\VideoController::class, 'create'])->name('videos.create');
 Route::post('/videos', [\App\Http\Controllers\VideoController::class, 'store'])->name('videos.store');
 Route::get('/videos/{video}', [\App\Http\Controllers\VideoController::class, 'show'])->name('videos.show');
+Route::get('/videos/{video}/edit', [\App\Http\Controllers\VideoController::class, 'edit'])->name('videos.edit');
