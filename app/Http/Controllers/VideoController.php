@@ -7,15 +7,12 @@ use App\Models\Video;
 class VideoController extends Controller{
     public function index()
     {
-//        $videos = Video::find(1);
-//        dd($videos);
         $videos = Video::all();
         return $videos;
-
     }
 
-    public function best()
+    public function create()
     {
-        echo "hello from best controller";
+        return view('videos.create');
     }
 }
