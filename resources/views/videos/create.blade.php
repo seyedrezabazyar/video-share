@@ -3,6 +3,7 @@
 @section('content')
     <div id="upload">
         <div class="row">
+            <x-validation-errors></x-validation-errors>
             <!-- upload -->
             <div class="col-md-8">
                 <h1 class="page-title"><span>آپلود</span> فیلم</h1>
