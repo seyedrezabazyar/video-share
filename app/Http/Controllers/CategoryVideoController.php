@@ -9,7 +9,7 @@ class CategoryVideoController extends Controller
 {
     public function index(Category $category)
     {
-        $videos = $category->videos()->paginate(18);
+        $videos = $category->videos()->paginate();
 
         # It only shows the previous and next page
 //        $videos = $category->videos()->simplePaginate();
