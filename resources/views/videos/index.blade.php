@@ -6,4 +6,7 @@
             <x-video-box :video="$video"/>
         @endforeach
     </div>
+    <div class="text-center">
+        {{$videos->links()}}
+    </div>
 @endsection

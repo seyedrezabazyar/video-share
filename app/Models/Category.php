@@ -13,12 +13,4 @@ class Category extends Model
     {
         return $this->hasMany(Video::class);
     }
-
-    # روش اول
-//    public function getRouteKeyName()
-//    {
-//        return 'slug';
-//    }
-
-    #روش دوم: افزودن slug در web.php
 }
