@@ -20,3 +20,5 @@ Route::post('/videos', [\App\Http\Controllers\VideoController::class, 'store'])-
 Route::get('/videos/{video}', [\App\Http\Controllers\VideoController::class, 'show'])->name('videos.show');
 Route::get('/videos/{video}/edit', [\App\Http\Controllers\VideoController::class, 'edit'])->name('videos.edit');
 Route::post('/videos/{video}', [\App\Http\Controllers\VideoController::class, 'update'])->name('videos.update');
+
+Route::get('categories/{category:slug}/videos', [\App\Http\Controllers\CategoryVideoController::class, 'index'])->name('categories.videos.index');
