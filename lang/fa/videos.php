@@ -10,4 +10,5 @@ return [
     'save' => 'ذخیره',
     'upload' => 'آپلود',
     'film' => 'فیلم',
+    'categories' => 'دسته بندی',
 ];
