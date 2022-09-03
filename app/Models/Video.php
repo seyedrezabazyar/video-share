@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Video extends Model
 {
     use HasFactory;
+
     protected $perPage = 18;
 
     protected $fillable = [
@@ -32,7 +33,7 @@ class Video extends Model
 
     public function relatedVideos(int $count = 6)
     {
-        return Video::all()->random($count);
+        return $this->category->getRandomVideos($count);
     }
 
     public function category()
