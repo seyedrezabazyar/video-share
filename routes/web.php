@@ -22,3 +22,38 @@ Route::get('/videos/{video}/edit', [\App\Http\Controllers\VideoController::class
 Route::post('/videos/{video}', [\App\Http\Controllers\VideoController::class, 'update'])->name('videos.update');
 
 Route::get('categories/{category:slug}/videos', [\App\Http\Controllers\CategoryVideoController::class, 'index'])->name('categories.videos.index');
+
+//Route::get('/login' , function (){
+//    $user = \App\Models\User::find(1);
+//    \Illuminate\Support\Facades\Auth::login($user);
+//    $response = \Illuminate\Support\Facades\Auth::check();
+//    dd(\Illuminate\Support\Facades\Auth::user()); ### user information
+//    dd($response); ### true or false
+//});
+
+//Route::get('/login', function () {
+//    $response = \Illuminate\Support\Facades\Auth::attempt([
+//        'email' => 'kiana.hamidi@example.com',
+//        'password' => 'password',
+//    ]);
+//    dd($response); ### true or false
+//
+//    ### مثال کد برای لاگین کردن
+//    #if ($response) {
+//    #    \Illuminate\Support\Facades\Auth::login($user);
+//    #}
+//});
+
+//Route::get('/login', function () {
+//    // $response = \Illuminate\Support\Facades\Auth::guard('admin')->check(); ### not defined
+//    // $response = \Illuminate\Support\Facades\Auth::guard('web')->check(); ### false
+//    $response = \Illuminate\Support\Facades\Auth::guard()->check(); ### default is "web"
+//
+//    dd($response);
+//});
+
+Route::get('/login', function () {
+    \Illuminate\Support\Facades\Auth::onceBasic();
+});
+
+
