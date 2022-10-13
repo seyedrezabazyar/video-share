@@ -23,37 +23,35 @@ Route::post('/videos/{video}', [\App\Http\Controllers\VideoController::class, 'u
 
 Route::get('categories/{category:slug}/videos', [\App\Http\Controllers\CategoryVideoController::class, 'index'])->name('categories.videos.index');
 
-//Route::get('/login' , function (){
-//    $user = \App\Models\User::find(1);
+//Route::get('/auth', function(){
+//    $user = \App\Models\User::find(2);
 //    \Illuminate\Support\Facades\Auth::login($user);
 //    $response = \Illuminate\Support\Facades\Auth::check();
-//    dd(\Illuminate\Support\Facades\Auth::user()); ### user information
-//    dd($response); ### true or false
-//});
-
-//Route::get('/login', function () {
-//    $response = \Illuminate\Support\Facades\Auth::attempt([
-//        'email' => 'kiana.hamidi@example.com',
-//        'password' => 'password',
-//    ]);
-//    dd($response); ### true or false
-//
-//    ### مثال کد برای لاگین کردن
-//    #if ($response) {
-//    #    \Illuminate\Support\Facades\Auth::login($user);
-//    #}
-//});
-
-//Route::get('/login', function () {
-//    // $response = \Illuminate\Support\Facades\Auth::guard('admin')->check(); ### not defined
-//    // $response = \Illuminate\Support\Facades\Auth::guard('web')->check(); ### false
-//    $response = \Illuminate\Support\Facades\Auth::guard()->check(); ### default is "web"
-//
+//    dd(Auth::user());
 //    dd($response);
 //});
 
-Route::get('/login', function () {
-    \Illuminate\Support\Facades\Auth::onceBasic();
+//Route::get('/auth', function(){
+//    $response = Auth::attempt([
+//        'email' => 'kashani.shirin@example.net',
+//        'password' => 'password'
+//    ]);
+//    if($response = true){
+//        Auth::login($user);
+//    }
+//});
+
+//Route::get('/auth', function(){
+////    $response = Auth::guard('web')->check(); // false
+//    $response = Auth::guard('admin')->check(); // not defined
+//    dd($response);
+//});
+
+Route::get('/auth', function(){
+    Auth::onceBasic();
 });
+
+
+
 
 
