@@ -23,35 +23,8 @@ Route::post('/videos/{video}', [\App\Http\Controllers\VideoController::class, 'u
 
 Route::get('categories/{category:slug}/videos', [\App\Http\Controllers\CategoryVideoController::class, 'index'])->name('categories.videos.index');
 
-//Route::get('/auth', function(){
-//    $user = \App\Models\User::find(2);
-//    \Illuminate\Support\Facades\Auth::login($user);
-//    $response = \Illuminate\Support\Facades\Auth::check();
-//    dd(Auth::user());
-//    dd($response);
-//});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-//Route::get('/auth', function(){
-//    $response = Auth::attempt([
-//        'email' => 'kashani.shirin@example.net',
-//        'password' => 'password'
-//    ]);
-//    if($response = true){
-//        Auth::login($user);
-//    }
-//});
-
-//Route::get('/auth', function(){
-////    $response = Auth::guard('web')->check(); // false
-//    $response = Auth::guard('admin')->check(); // not defined
-//    dd($response);
-//});
-
-Route::get('/auth', function(){
-    Auth::onceBasic();
-});
-
-
-
-
-
+require __DIR__.'/auth.php';
