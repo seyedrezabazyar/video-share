@@ -12,21 +12,23 @@ const mix = require('laravel-mix');
  */
 
 mix.styles([
-    'resources/css/app.css',
     'resources/css/bootstrap.min.css',
     'resources/css/responsive.css',
     'resources/css/style.css'
 ],'public/css/main.css');
 
 mix.js([
-    'resources/js/app.js',
     'resources/js/jquery.sticky-kit.min.js',
     'resources/js/custom.js',
     'resources/js/bootstrap.min.js',
     'resources/js/imagesloaded.pkgd.min.js',
     'resources/js/grid-blog.min.js'
-], 'public/js/main.js').postCss('resources/css/app.css', 'public/css', [
-    //
+], 'public/js/main.js');
+
+mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('autoprefixer'),
 ]);
 
 mix.copyDirectory('resources/css/fonts', 'public/css/fonts');
