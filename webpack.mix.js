@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.styles([
+    'resources/css/app.css',
     'resources/css/bootstrap.min.css',
     'resources/css/responsive.css',
     'resources/css/style.css'
@@ -24,7 +25,9 @@ mix.js([
     'resources/js/bootstrap.min.js',
     'resources/js/imagesloaded.pkgd.min.js',
     'resources/js/grid-blog.min.js'
-], 'public/js/main.js');
+], 'public/js/main.js').postCss('resources/css/app.css', 'public/css', [
+    //
+]);
 
 mix.copyDirectory('resources/css/fonts', 'public/css/fonts');
 mix.copyDirectory('resources/img', 'public/img');
